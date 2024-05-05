@@ -1,5 +1,5 @@
 # Olist-Business-Analysis-ELK
-This is a project to analyse on the customers, products, sallers, reviews and orders of the Brazilian E-commerce giant Olist with **Elasticsearch**, **Kibana** and **Logstash**.
+This is a project to analyse on the customers, products, sellers, reviews and orders of the Brazilian E-commerce giant Olist with **Elasticsearch**, **Kibana** and **Logstash**.
 ## Dataset Configuration 
 1.  Here's the link to the downloads page : https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce?select=product_category_name_translation.csv
 2. 	Data schema
