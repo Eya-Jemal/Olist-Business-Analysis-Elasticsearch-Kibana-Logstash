@@ -2,10 +2,26 @@
 This is a project to analyse on the customers, products, sallers, reviews and orders of the Brazilian E-commerce giant Olist with **Elasticsearch**, **Kibana** and **Logstash**.
 ## Dataset Configuration 
 1.  Here's the link to the downloads page : https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce?select=product_category_name_translation.csv
-2.  Create two datasets :
-   	+  **Payment_Dataset_Dimension :** olist_customers_dataset.csv, olist_geolocation_dataset.csv, olist_order_items_dataset.csv, olist_order_payments_dataset.csv, olist_orders_dataset.csv, olist_products_dataset.csv, olist_sellers_dataset.csv, product_category_name_translation.
+2.  Create two datasets that groups the CSV files by their primary key :
+   	+  **Payment_Dataset_Dimension :** Contains
+   		+  	olist_customers_dataset.csv
+ 		+	olist_geolocation_dataset.csv
+  		+	olist_order_items_dataset.csv
+    	+	olist_order_payments_dataset.csv
+     	+	olist_orders_dataset.csv
+        +	olist_products_dataset.csv
+       +	olist_sellers_dataset.csv
+         +	product_category_name_translation
       
-	+  **Reviews_Dataset_Dimension :** olist_customers_dataset.csv, olist_geolocation_dataset.csv, olist_order_items_dataset.csv, olist_order_reviews_dataset.csv, olist_orders_dataset.csv, olist_products_dataset.csv, olist_sellers_dataset.csv, product_category_name_translation 
+	+  **Reviews_Dataset_Dimension :** Contains 
+		+  	olist_customers_dataset.csv
+ 		+	olist_geolocation_dataset.csv
+  		+	olist_order_items_dataset.csv
+    	+	olist_order_reviews_dataset.csv
+     	+	olist_orders_dataset.csv
+        +	olist_products_dataset.csv
+        +	olist_sellers_dataset.csv
+          +	product_category_name_translation
 
 
 
