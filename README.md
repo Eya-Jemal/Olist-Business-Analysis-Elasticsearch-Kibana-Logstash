@@ -234,5 +234,24 @@ Now that your index is created, access "Index Management" under the "Kibana" sec
 2.	Create a New Dashboard
 3.	Configure Visualizations: Configure each visualization by selecting the index pattern, fields, and any additional settings or filters. Customize the appearance and settings of each visualization according to your requirements.
 4.	Save Dashboard
+5.	View Dashboard :
+   
+   ![image](https://github.com/Eya-Jemal/Olist-Business-Analysis/assets/62604009/eb168a02-c731-4b03-bd70-dbd6a6b24a05)
+
+   ![image](https://github.com/Eya-Jemal/Olist-Business-Analysis/assets/62604009/c76d0283-579d-4fb3-bcc0-e83e18ade889)
+
+
+   ![image](https://github.com/Eya-Jemal/Olist-Business-Analysis/assets/62604009/4e1fa0ab-693f-4b8f-8a96-105fb3f992b8)
+
+
+   ![image](https://github.com/Eya-Jemal/Olist-Business-Analysis/assets/62604009/e05bf7c5-45c4-4475-a8d3-1157402a87b1)
+
+
+   ![image](https://github.com/Eya-Jemal/Olist-Business-Analysis/assets/62604009/f37bf3f2-3b73-424a-930b-1e739783f5ba)
+
+
+
+
+
 
 
