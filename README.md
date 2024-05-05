@@ -1,7 +1,7 @@
 # Olist-Business-Analysis-ELK
-This is a project to analyse on the customers, products, sallers, reviews and orders of the Brazilian E-commerce giant Olist with **Elasticsearch** **Kibana** **Logstash**.
+This is a project to analyse on the customers, products, sallers, reviews and orders of the Brazilian E-commerce giant Olist with **Elasticsearch**, **Kibana** and **Logstash**.
 
-## Downloading and configuring ELK:
+## Downloading and configuring ELK
 
 ### Elasticsearch :
 1.  Here's the link to the downloads page : [https://www.elastic.co/downloads/elasticsearch](https://www.elastic.co/downloads/elasticsearch)
@@ -59,7 +59,7 @@ kibana.bat
    ```
 input {
     file {
-        path => ["D:/D-II/Sem2/bi/Project/Brazilian E-commerce Public Dataset/olist_dataset_reviewFinale.csv"]
+        path => ["D:/D-II/Sem2/bi/Project/Brazilian E-commerce Public Dataset/your_data.csv"]
         start_position => beginning
 	sincedb_path => "nul"
     }
@@ -158,7 +158,7 @@ output {
 	ssl_certificate_verification => false
 	user => "elastic"
       	password => "elastic"
-        index => "olist_dataset_review_etl_geo_cs"
+        index => "your_index_name"
     }
 }
 
@@ -214,5 +214,25 @@ output {
 4.	Load data into Elasticsearch using Logstash with your specific configuration file:
    ```
 logstash -f /path/to/your/file.conf
-``` 
+```
+
+## Explore and visualize data stored in Elasticsearch
+
+### Explore data :
+1.	Open Kibana: Open your web browser and navigate to Kibana.
+2.	Go to Management: Click on the "Management" tab located in the left-hand menu of Kibana and click on the "Stack Management"
+3.	Access Data Views : Under the "Kibana" section in the Management menu, select "Data Views".
+4.	Create Data Views: Click on the "Create Data Views" button.
+6.	Enter the name of your index pattern in the "Index pattern" field. You can use wildcard patterns to match multiple indices (e.g., my_index*).
+7.	Select Time Filter Field (Optional): If your data has a time-based field (e.g., a timestamp), Kibana will ask you to select it. This allows you to use time-based filters and visualizations. Choose the appropriate time field from the dropdown menu.
+8.	Click "Save Data Views to kiban".
+
+Now that your index is created, access "Index Management" under the "Kibana" section in the Management menu to discover your index.
+
+### Visualize data : 
+1.	Go to Dashboard: Click on the "Dashboard" tab located in the left-hand menu of Kibana.
+2.	Create a New Dashboard
+3.	Configure Visualizations: Configure each visualization by selecting the index pattern, fields, and any additional settings or filters. Customize the appearance and settings of each visualization according to your requirements.
+4.	Save Dashboard
+
 
