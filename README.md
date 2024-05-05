@@ -2,7 +2,11 @@
 This is a project to analyse on the customers, products, sallers, reviews and orders of the Brazilian E-commerce giant Olist with **Elasticsearch**, **Kibana** and **Logstash**.
 ## Dataset Configuration 
 1.  Here's the link to the downloads page : https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce?select=product_category_name_translation.csv
-2.  Create two datasets that groups the CSV files by their primary key :
+2. 	Data schema
+   
+   ![image](https://github.com/Eya-Jemal/Olist-Business-Analysis/assets/62604009/5594dc9b-f1d5-44d1-92b0-2af59f8090fa)
+
+3.  Create two datasets that groups the CSV files by their primary key :
    	+  **Payment_Dataset_Dimension :** Contains
    		+  	olist_customers_dataset.csv
  		+	olist_geolocation_dataset.csv
