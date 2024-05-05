@@ -165,9 +165,41 @@ output {
 
 ```
 
-+ To add a map visualization in Elasticsearch and Kibana, one of the solutions you can follow is to implement the following general steps:
-  1-
++ To add a map visualization in Elasticsearch and Kibana, one of the solutions you can follow is to access the Dev Tools in Kibana and create a field of type geo_point for your future index, follow these steps:
+  
+  1- configure mapping in Kibana :
+
+  
+  	+ Open Kibana: Open your web browser and navigate to Kibana.
+ 
+  	  
+  	+ Access Dev Tools: Click on the "Dev Tools" tab located in the left-hand menu of Kibana. This will open the Kibana Dev Tools interface.
+  	  
+  	+ Create Mapping: In the Dev Tools interface, switch to the "Console" tab if it's not already selected.
+  	  
+	+ Use the following command to create a mapping for your index with a field of type geo_point: repeat the process for each field
+
+  ````
+  put _template/geo {
+  "index_patterns" : [ 
+    "your_index_name" 
+    ], 
+  "settings" : {} , 
+    "mappings" : {
+      "properties" : { 
+        "your_geofield_name" : { "type" :"geo_point"
+          
+        }
+        
+      }},
+      "aliases" : {}
+  }
+    ````
+  
   ![image](https://github.com/Eya-Jemal/Olist-Business-Analysis/assets/62604009/fb932ee4-8f4b-4236-8af8-59834cd76cda)
+
+  2- configure mapping in Logstash :
+  	+ link the fields created in Kibana Dev Tools with a new fields in Logstash configuration file using existing data from your dataset with the format latitude,longitude.
 
   ```
   mutate{ add_field => {
@@ -178,4 +210,9 @@ output {
 	}
 
   ```
+
+4.	Load data into Elasticsearch using Logstash with your specific configuration file:
+   ```
+logstash -f /path/to/your/file.conf
+``` 
 
